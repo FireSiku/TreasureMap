@@ -1,0 +1,14 @@
+## Interface: 70300
+## Author: Siku @ Sentinels US
+## eMail: chaoslux [at] gmail [dot] com
+## Version: 0.1
+## SavedVariables: TreasureMapDB
+## OptionalDeps: Ace3
+
+## Title: Treasure Map
+## Notes: Add various collectible to your world map.
+
+embeds.xml
+locales.xml
+
+TreasureMap.lua
