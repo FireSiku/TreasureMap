@@ -23,6 +23,8 @@ externals:
     url: https://repos.wowace.com/wow/ace3/mainline/trunk/AceLocale-3.0
   libs/AceBucket-3.0:
     url: https://repos.wowace.com/wow/ace3/mainline/trunk/AceBucket-3.0
+  libs/HereBeDragons-1.0:
+    url: https://repos.wowace.com/wow/herebedragons/mainline.git
 
 enable-nolib-creation: no
 
