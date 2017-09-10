@@ -29,6 +29,14 @@ local continentList = {}
 -- Addon Functions --
 ---------------------
 
+addon.pinList["Raid Mounts"] = {
+	{ x = 60.2, y = 27.5, id = 499, zone = 798, item = 35513, group = "MGT" , boss = "Kael'Thas Sunstrider", },
+	{ x = 41.9, y = 65.8, id = 478, zone = 723, item = 32768, group = "Sethekk" , boss = "Anzu", },
+	{ x = 58.4, y = 45, id = 491, zone = 524, item = 44151, group = "UP" , boss = "Skadi the Ruthless", },
+	{ x = 53, y = 86, id = 492, zone = 492, item = 43951, group = "COT" , boss = "Infinite Corruptor", },
+}
+
+
 local pinTable = {
 	{ name = "Icecrown Test"   , x = 62, y = 40, id = 492, }, 
 	{ name = "Storm Peaks Test", x = 62, y = 40, id = 495, }, 
