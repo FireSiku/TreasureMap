@@ -33,28 +33,14 @@ addon.pinList = {}
 -- Addon Functions --
 ---------------------
 
---[[local pinTable = {
-	{ name = "Icecrown Test"   , x = 62, y = 40, id = 492, }, 
-	{ name = "Storm Peaks Test", x = 62, y = 40, id = 495, }, 
-	{ name = "ICC Test 1"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 2"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 3"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 4"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 5"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 6"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 7"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "ICC Test 8"      , x = 53, y = 86, id = 492, group = "ICC"   , }, 
-	{ name = "UlduarTest 1"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 2"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 3"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 4"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 5"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 6"    , x = 41, y = 18, id = 495, group = "Ulduar", }, 
-	{ name = "UlduarTest 7"    , x = 41, y = 18, id = 495, group = "Ulduar", },
-	--{ name = "Harbringer"      , x = 82.8, y = 83.3, id = 696, group = "MC", },
-}--]]
+addon.pinList["Raid Mounts"] = {
+	{ x = 60.2, y = 27.5, id = 499, zone = 798, item = 35513, group = "MGT" , boss = "Kael'Thas Sunstrider", },
+	{ x = 41.9, y = 65.8, id = 478, zone = 723, item = 32768, group = "Sethekk" , boss = "Anzu", },
+	{ x = 58.4, y = 45, id = 491, zone = 524, item = 44151, group = "UP" , boss = "Skadi the Ruthless", },
+	{ x = 53, y = 86, id = 492, zone = 492, item = 43951, group = "COT" , boss = "Infinite Corruptor", },
+}
 
-addon.pinList["Raidiang With Leashes"] = {
+addon.pinList["Raiding With Leashes"] = {
 	-- I: Vanilla
 	{ x = 20.5, y = 32.8, id = 29 , zone = 696, petID = 68665, group = "BRM" , boss = "Sulfuron Harbringer"  , }, 
 	{ x = 20.5, y = 32.8, id = 29 , zone = 696, petID = 68664, group = "BRM" , boss = "Magmadar"             , }, 
