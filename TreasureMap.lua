@@ -32,6 +32,7 @@ addon.pinList = {}
 ---------------------
 -- Addon Functions --
 ---------------------
+--/dump LibStub("HereBeDragons-1.0"):GetPlayerZonePosition()
 
 addon.pinList["Heroic Dungeon Mounts"] = {
 	{ x = 65.8, y = 48.9, id = 161, zone = 521, item = 43951, group = "COT", boss = "Infinite Corruptor"    , }, 
@@ -73,17 +74,27 @@ addon.pinList["Raid Mounts"] = {
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 78919, group = "COT", boss = "Ultraxion"         , }, 
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 77067, group = "COT", boss = "Deathwing"         , }, 
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 77069, group = "COT", boss = "Deathwing (Heroic)", }, 
-	-- Level 90 World Bosses
-	{ x = 67.6, y = 74.6, id = 809, item = 87771, boss = "Sha of Anger", }, 
-	{ x = 71.6, y = 64.4, id = 807, item = 89783, boss = "Galleon"     , }, 
-	{ x = 50.6, y = 54.4, id = 929, item = 94228, boss = "Oondasta"    , }, 
-	{ x = 60.5, y = 37.3, id = 928, item = 95057, boss = "Nalak"       , }, 
+	-- World Bosses Mounts
+	{ x = 67.6, y = 74.6, id = 809, item = 87771 , boss = "Sha of Anger", }, 
+	{ x = 71.6, y = 64.4, id = 807, item = 89783 , boss = "Galleon"     , }, 
+	{ x = 50.6, y = 54.4, id = 929, item = 94228 , boss = "Oondasta"    , }, 
+	{ x = 60.5, y = 37.3, id = 928, item = 95057 , boss = "Nalak"       , }, 
+	{ x = 47.1, y = 78.4, id = 948, item = 116771, boss = "Rukhmar"     , note = "Patrols around the entire zone.", }, 
 	-- Level 90
 	{ x = 60.0, y = 40.0, id = 809, zone = 896, item = 87777 , group = "MSV", boss = "Elegon"                     , }, 
 	{ x = 63.0, y = 32.0, id = 928, zone = 930, item = 93666 , group = "TOT", boss = "Horridon"                   , }, 
 	{ x = 63.0, y = 32.0, id = 928, zone = 930, item = 95059 , group = "TOT", boss = "Ji-Kun"                     , }, 
 	{ x = 74.0, y = 44.0, id = 811, zone = 953, item = 104253, group = "SOO", boss = "Garrosh Hellscream (Mythic)", },  
-	
+	-- Level 100
+	{ x = 51.4, y = 28.7, id = 949, zone = 988 , item = 116660, group = "BRF", boss = "Blackhand (Mythic)" , }, 
+	{ x = 46.5, y = 53.2, id = 945, zone = 1026, item = 123890, group = "HFC", boss = "Archimonde (Mythic)", },
+	-- Level 110
+	{ x = 47.1, y = 72.4, id = 32  , zone = 1115, item = 142236, group = "Kara", boss = "Atuumen the Huntsman (Mythic)", }, 
+	{ x = 47.1, y = 72.4, id = 32  , zone = 1115, item = 142552, group = "Kara", boss = "Nightbane (Mythic)"           , }, 
+	{ x = 58.1, y = 77.4, id = 1033, zone = 1088, item = 137574, group = "NH"  , boss = "Gul'dan"                      , }, 
+	{ x = 58.1, y = 77.4, id = 1033, zone = 1088, item = 137575, group = "NH"  , boss = "Gul'dan (Mythic)"             , }, 
+	{ x = 64.5, y = 20.9, id = 1021, zone = 1147, item = 143643, group = "TOS" , boss = "Mistress Sassz'ine"           , }, 
+	--{ x = 58.1, y = 77.4, id = 1171, zone = 1088, item = 142552, group = "ABT" , boss = "Felhounds of Sargeras"        , }, 
 }
 
 addon.pinList["Raiding With Leashes"] = {
