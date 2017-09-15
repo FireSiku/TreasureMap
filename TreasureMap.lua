@@ -20,9 +20,9 @@ local db
 local defaults = {
 	profile = {
 		Enable = true,
-		Mount = { r = 0.9, g = 0.3, b = 0.3, }, 
-		Pet   = { r = 0.2, g = 0.9, b = 0.2, }, -
-		Toy   = { r = 1  , g = 0.1, b = 1  , }, 
+		Mount = { r = 0.9, g = 0.3, b = 0.3, },
+		Pet   = { r = 0.2, g = 0.9, b = 0.2, },
+		Toy   = { r = 1  , g = 0.1, b = 1  , },
 	},
 	global = {
 		petInfoCache = {},
