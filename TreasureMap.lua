@@ -20,6 +20,9 @@ local db
 local defaults = {
 	profile = {
 		Enable = true,
+		Mount = { r = 0.9, g = 0.3, b = 0.3, }, 
+		Pet   = { r = 0.2, g = 0.9, b = 0.2, }, -
+		Toy   = { r = 1  , g = 0.1, b = 1  , }, 
 	},
 	global = {
 		petInfoCache = {},
@@ -29,9 +32,9 @@ local defaults = {
 local continentList = {}
 addon.pinList = {}
 
----------------------
--- Addon Functions --
----------------------
+--------------------
+-- Addon Pin List --
+--------------------
 --/dump LibStub("HereBeDragons-1.0"):GetPlayerZonePosition()
 
 addon.pinList["Heroic Dungeon Mounts"] = {
@@ -74,12 +77,6 @@ addon.pinList["Raid Mounts"] = {
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 78919, group = "COT", boss = "Ultraxion"         , }, 
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 77067, group = "COT", boss = "Deathwing"         , }, 
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, item = 77069, group = "COT", boss = "Deathwing (Heroic)", }, 
-	-- World Bosses Mounts
-	{ x = 67.6, y = 74.6, id = 809, item = 87771 , boss = "Sha of Anger", }, 
-	{ x = 71.6, y = 64.4, id = 807, item = 89783 , boss = "Galleon"     , }, 
-	{ x = 50.6, y = 54.4, id = 929, item = 94228 , boss = "Oondasta"    , }, 
-	{ x = 60.5, y = 37.3, id = 928, item = 95057 , boss = "Nalak"       , }, 
-	{ x = 47.1, y = 78.4, id = 948, item = 116771, boss = "Rukhmar"     , note = "Patrols around the entire zone.", }, 
 	-- Level 90
 	{ x = 60.0, y = 40.0, id = 809, zone = 896, item = 87777 , group = "MSV", boss = "Elegon"                     , }, 
 	{ x = 63.0, y = 32.0, id = 928, zone = 930, item = 93666 , group = "TOT", boss = "Horridon"                   , }, 
@@ -95,6 +92,12 @@ addon.pinList["Raid Mounts"] = {
 	{ x = 58.1, y = 77.4, id = 1033, zone = 1088, item = 137575, group = "NH"  , boss = "Gul'dan (Mythic)"             , }, 
 	{ x = 64.5, y = 20.9, id = 1021, zone = 1147, item = 143643, group = "TOS" , boss = "Mistress Sassz'ine"           , }, 
 	--{ x = 58.1, y = 77.4, id = 1171, zone = 1088, item = 142552, group = "ABT" , boss = "Felhounds of Sargeras"        , }, 
+	-- World Bosses Mounts
+	{ x = 67.6, y = 74.6, id = 809, item = 87771 , boss = "Sha of Anger", }, 
+	{ x = 71.6, y = 64.4, id = 807, item = 89783 , boss = "Galleon"     , }, 
+	{ x = 50.6, y = 54.4, id = 929, item = 94228 , boss = "Oondasta"    , }, 
+	{ x = 60.5, y = 37.3, id = 928, item = 95057 , boss = "Nalak"       , }, 
+	{ x = 47.1, y = 78.4, id = 948, item = 116771, boss = "Rukhmar"     , note = "Patrols around the entire zone.", }, 
 }
 
 addon.pinList["Raiding With Leashes"] = {
@@ -171,17 +174,28 @@ addon.pinList["Raiding With Leashes"] = {
 	{ x = 65.8, y = 48.9, id = 161, zone = 824, petID = 127954, group = "COT", boss = "Madness of Deathwing"   , }, 
 }
 
-local function CreatePin(name)
+---------------------
+-- Addon Functions --
+---------------------
+
+local function SetPinColor(self, color)
+	local c = db[color]
+	self.texture:SetVertexColor(c.r, c.g, c.b)
+end
+
+function addon:CreatePin(name)
 	local pin = CreateFrame("Button", name, WorldMapButton)
 	pin:SetSize(20,20)
 	pin:SetPoint("CENTER", WorldMapButton, "CENTER")
 
 	local tex = pin:CreateTexture(nil, "OVERLAY")
 	tex:SetAllPoints(pin)
-	tex:SetTexture("Interface\\RAIDFRAME\\ReadyCheck-NotReady.blp")
+	--tex:SetTexture("Interface\\RAIDFRAME\\ReadyCheck-NotReady.blp")
+	tex:SetTexture("Interface\\AddOns\\TreasureMap\\WhiteMark.tga")
 	--tex:SetDesaturated(true)
-
 	pin.texture = tex
+	pin.SetPinColor = SetPinColor
+	
 	pin:Show()
 	return pin
 end
@@ -247,7 +261,7 @@ function addon:GeneratePinList()
 			local data = pinList[i]
 			local pinName = "TMPin"..pinCount
 			pinCount = pinCount + 1
-			local pin = CreatePin(pinName)
+			local pin = addon:CreatePin(pinName)
 			pin.name = data.name
 			pin.id = data.id
 			pin.x, pin.y = data.x, data.y
@@ -263,6 +277,15 @@ function addon:GeneratePinList()
 				--end
 				--UpdatePinGroupAnchors(data.group)
 				--HBDPins:AddWorldMapIconMF(addonName, group, data.id, nil, data.x/100, data.y/100)
+			end
+
+			-- Color the pin based on type
+			if data.petID then
+			--	pin.texture:SetVertexColor(0.2,0.9,0.2)
+				pin:SetPinColor("Pet")
+			else
+				pin:SetPinColor("Mount")
+				--pin.texture:SetVertexColor(1,0.3,0.3)
 			end
 
 			HBDPins:AddWorldMapIconMF(addonName, pin, data.id, nil, data.x/100, data.y/100)
