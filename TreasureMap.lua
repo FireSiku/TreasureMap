@@ -20,11 +20,12 @@ local db
 local defaults = {
 	profile = {
 		Enable = true,
-		Mount    = { r = 0.9, g = 0.3, b = 0.3, }, 
-		Pet      = { r = 0.9, g = 0.1, b = 0.9, }, 
-		Toy      = { r = 0.2, g = 0.9, b = 0.2, }, 
-		Treasure = { r = 0.2, g = 0.8, b = 1  , }, 
-		Rare     = { r = 0.8, g = 0.6, b = 0.4, }, 
+		Mount       = { r = 0.9, g = 0.3, b = 0.3, }, 
+		Pet         = { r = 0.9, g = 0.1, b = 0.9, }, 
+		Toy         = { r = 0.2, g = 0.9, b = 0.2, }, 
+		Treasure    = { r = 0.2, g = 0.8, b = 1  , }, 
+		Rare        = { r = 0.8, g = 0.6, b = 0.4, }, 
+		Achievement = { r = 1  , g = 1  , b = 1  , }, 
 	},
 }
 
