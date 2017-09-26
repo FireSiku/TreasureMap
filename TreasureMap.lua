@@ -191,12 +191,13 @@ local function PinTooltipHandler(self, ...)
 	tooltip:SetOwner(self, "ANCHOR_RIGHT")
 	tooltip:ClearLines()
 	
-	tooltip:AddLine(self:GetDebugName())
+	tooltip:AddLine(format("|cff0070dd%s|r", self.name or self:GetDebugName()))
+	if self.type then tooltip:AddLine(self.type) end
 	tooltip:AddLine(" ")
 	
-	if self.zone then tooltip:AddLine("Zone: "..GetMapNameByID(self.zone)) end
-	if self.boss then tooltip:AddLine("Boss: "..self.boss) end
-	if self.note then tooltip:AddLine("Note: "..self.note) end
+	if self.zone then tooltip:AddLine(format("|cffffffffZone:|r %s", GetMapNameByID(self.zone))) end
+	if self.boss then tooltip:AddLine(format("|cffffffffBoss:|r %s", self.boss)) end
+	if self.note then tooltip:AddLine(format("|cffffffffNote:|r %s", self.note)) end
 
 	tooltip:Show()
 end
@@ -305,13 +306,17 @@ function addon:GeneratePinList()
 				--HBDPins:AddWorldMapIconMF(addonName, group, data.id, nil, data.x/100, data.y/100)
 			end
 
-			-- Color the pin based on type
+			-- Add type-specific information. 
 			if data.pet then
-			--	pin.texture:SetVertexColor(0.2,0.9,0.2)
 				pin:SetPinColor("Pet")
+				pin.type = "Pet"
 			else
+			elseif data.mount then
+				pin.type = "Mount"
 				pin:SetPinColor("Mount")
-				--pin.texture:SetVertexColor(1,0.3,0.3)
+			elseif data.toy then
+				pin.Type = "Toy"
+				pin:SetPinColor("Toy")
 			end
 
 			HBDPins:AddWorldMapIconMF(addonName, pin, data.id, nil, data.x/100, data.y/100)
