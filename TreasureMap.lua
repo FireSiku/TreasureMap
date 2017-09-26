@@ -13,8 +13,11 @@ local addonName = ...
 local addon = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceEvent-3.0")
 local HBD = LibStub("HereBeDragons-1.0")
 local HBDPins = LibStub("HereBeDragons-Pins-1.0")
-local options = {}
 local db
+
+addon.pinList = {}
+local pinStorage = {}
+local pinGroupStorage = {}
 
 --Setup Defaults
 local defaults = {
@@ -29,8 +32,11 @@ local defaults = {
 	},
 }
 
-local continentList = {}
-addon.pinList = {}
+-- Locals and Constants
+local X_SPACING = 1.5
+local Y_SPACING = 2.0
+local SPACING = 2
+local pinCount = 1
 
 ---------------------
 -- Addon Functions --
@@ -83,31 +89,6 @@ function addon:CreatePin(name)
 	return pin
 end
 
-local pinGroupStorage = {}
-local function GetPinGroup(name)
-	if pinGroupStorage[name] then 
-		return pinGroupStorage[name] 
-	end
-
-	-- If it doesn't exists, create it.
-	local group = CreateFrame("Frame", "TMGRoup"..name, WorldMapButton)
-	pinGroupStorage[name] = group
-	group:SetSize(20,20)
-	return group
-end
-
-local function UpdatePinGroupAnchors(name)
-	local group = pinGroupStorage[name]
-
-	group[1]:SetPoint("TOPLEFT", group, "TOPLEFT")
-	for i = 2, #group do
-		group[i]:SetPoint("LEFT", group[i-1], "RIGHT", -5, 0)
-	end
-end
-
-local X_SPACING = 1.5
-local Y_SPACING = 2.0
-local SPACING = 2
 function addon:UpdateGroupedPinPosition(name)
 	local group = pinGroupStorage[name]
 	if not group then return end
@@ -135,9 +116,6 @@ function addon:UpdateGroupedPinPosition(name)
 	end
 end
 
-local pinCount = 1
-local pinStorage = {}
-
 function addon:GeneratePinList()
 	for typeName, pinList in pairs(addon.pinList) do
 		for i = 1, #pinList do
@@ -153,13 +131,11 @@ function addon:GeneratePinList()
 
 			-- If several pins are supposed to come from the same source (instance, ...), groups will anchor pins next to each other
 			if data.group then
-				local group = GetPinGroup(data.group)
+				local group = pinGroupStorage[data.group] or {}
+				if not pinGroupStorage[data.group] then
+					pinGroupStorage[data.group] = group
+				end
 				group[#group+1] = pin
-				--if #group > 1 then
-				--	data.y = data.y + 2 * (#group - 1)
-				--end
-				--UpdatePinGroupAnchors(data.group)
-				--HBDPins:AddWorldMapIconMF(addonName, group, data.id, nil, data.x/100, data.y/100)
 			end
 
 			-- Add type-specific information. 
@@ -185,29 +161,11 @@ function addon:GeneratePinList()
 	end
 end
 
-local oldMapID
-function addon:WORLD_MAP_UPDATE()
-	if not WorldMapButton:IsVisible() then return end
-	local continentIndex, continentID = GetCurrentMapContinent()
-	local mapID = GetCurrentMapAreaID()
-	-- We don't need to this to trigger continuously while it's still on the same map.
-	if mapID == oldMapID then return end
-	oldMapID = mapID
-end
-
-function addon:GenerateContinentList()
-	-- GetMapContinents returns a list alternating between IDs and localizzed names, so we can go in steps of two.
-	local returnList = {GetMapContinents()}
-	for i = 1, #returnList, 2 do
-		local id = returnList[i]
-		continentList[id] = returnList[i+1]
-	end
-end
-
 -------------------
 -- Addon Options -- 
 -------------------
 
+local options = {}
 local function LoadOptions()
 	if options.args then return end
 
@@ -232,25 +190,19 @@ local function LoadOptions()
 	return options
 end
 
-function addon:SetupOptions()
-	LibStub("AceConfig-3.0"):RegisterOptionsTable(addonName, LoadOptions);
-	options.General = LibStub("AceConfigDialog-3.0"):AddToBlizOptions(addonName, nil, nil, "General")
-end
-
 --Addon Loaded
 function addon:OnInitialize()
-	
 	--Setup Database
 	self.db = LibStub("AceDB-3.0"):New("TreasureMapDB",defaults)
 	db = self.db.profile
 
-	addon:SetupOptions()
+	--Setup Options
+	LibStub("AceConfig-3.0"):RegisterOptionsTable(addonName, LoadOptions);
+	options.General = LibStub("AceConfigDialog-3.0"):AddToBlizOptions(addonName, nil, nil, "General")
 end
 
--- Event to care about: 
 function addon:OnEnable()
-	addon:RegisterEvent("WORLD_MAP_UPDATE")
-	addon:GenerateContinentList()
+	--addon:RegisterEvent("WORLD_MAP_UPDATE")
 	addon:GeneratePinList()
 end
 
