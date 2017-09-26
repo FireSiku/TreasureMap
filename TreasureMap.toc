@@ -14,3 +14,4 @@ locales.xml
 TreasureMap.lua
 Pets.lua
 Mounts.lua
+Rares.lua
