@@ -415,8 +415,8 @@ addon.pinList["Jungle Stalker"] = {
     { x = 34.4, y = 72.6, id = 945, rare = 92694, }, -- The Goreclaw
     { x = 33  , y = 35.8, id = 945, rare = 92941, }, -- Gorabosh
     { x = 20  , y = 53.6, id = 945, rare = 93028, }, -- Driss Vile
-    { x = 36.2, y = 79  , id = 945, rare = 93076, }, -- (The Real) Captain Ironbeard
-    { x = 36  , y = 80.6, id = 945, rare = 93076, }, -- (The Real) Captain Ironbeard
+    { x = 36.2, y = 79  , id = 945, rare = 93076, toy = 127659, }, -- (The Real) Captain Ironbeard
+    { x = 36  , y = 80.6, id = 945, rare = 93076, toy = 127659, }, -- (The Real) Captain Ironbeard
     { x = 34.6, y = 78  , id = 945, rare = 93125, }, -- Glub'glok
     { x = 28.8, y = 51  , id = 945, rare = 93168, }, -- Felbore
     { x = 54.2, y = 80.8, id = 945, rare = 92766, }, -- Akrrilo
