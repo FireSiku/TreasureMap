@@ -16,11 +16,15 @@ function TMDebug_GetPetList()
         petTable[npcID] = petID
     end
     
-    for k,v in pairs(addon.pinList["Raiding With Leashes"]) do
-        if petTable[v.pet] then
-            LUI:Print(petTable[v.pet], v.boss)
-        end
-    end
+	for n, t in pairs(addon.pinList) do
+		for k,v in pairs(t) do
+			if v.pet then
+				if petTable[v.pet] then
+					LUI:Print(v.pet, petTable[v.pet])
+				end
+			end
+		end
+	end
 end
 
 function addon:GetPetName(id)
@@ -52,11 +56,11 @@ addon.pinList["Reputation Toys"] = {
 
 addon.pinList["Reputation Pets"] = {
     -- Legion
-    { x = 36.4, y = 46.8, id = 1033, pet = 97174, group = "RNF", req="Revered", }, -- Extinguished Eye
-    { x = 60.2, y = 51.2, id = 1017, pet = 106181, group = "RVLJ", req="Revered", },
-    { x = 48.2, y = 73.8, id = 1015, pet = 97128, group = "RWD", req="Revered", },
-    { x = 38.6, y = 45.8, id = 1024, pet = 106152, group = "RHMT", req="Revered", },
-    { x = 46.8, y = 41.4, id = 1015, pet = 112728, group = "RCOF", req="Revered", },
+    { x = 36.4, y = 46.8, id = 1033, pet = 1717, group = "RNF", req="Revered", }, -- Extinguished Eye
+    { x = 60.2, y = 51.2, id = 1017, pet = 1885, group = "RVLJ", req="Revered", },
+    { x = 48.2, y = 73.8, id = 1015, pet = 1716, group = "RWD", req="Revered", },
+    { x = 38.6, y = 45.8, id = 1024, pet = 1884, group = "RHMT", req="Revered", },
+    { x = 46.8, y = 41.4, id = 1015, pet = 1931, group = "RCOF", req="Revered", },
 }
 
 addon.pinList["Raiding With Leashes"] = {

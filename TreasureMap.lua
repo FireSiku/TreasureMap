@@ -39,11 +39,6 @@ local Y_SPACING = 2.0
 local SPACING = 2
 local pinCount = 1
 
--- Find/Replace Regex
--- /way (.*) ([0-9]*[.][0-9]+) ([0-9]*[.][0-9]+) (.*)
--- { x = $2, y = $3, map = $1, npc = $4, },
--- Can be used to convert TomTom Waypoints into pinTable.
-
 ---------------------
 -- Addon Functions --
 ---------------------

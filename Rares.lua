@@ -6,8 +6,7 @@ local addon = LibStub("AceAddon-3.0"):GetAddon(addonName)
 local HBD = LibStub("HereBeDragons-1.0")
 
 -- Scanning those acheivements can give us various npc names, mostly used for rares.
-local RARE_ACHIEVEMENTS = { 1312, 2257, 7439, }
-local PRINT_ACH = 7439
+local RARE_ACHIEVEMENTS = { 1312, 2257, 7439, 8714, }
 
 ---------------------
 -- Addon Functions --
@@ -21,11 +20,6 @@ function addon:RareNameCache()
 			addon.npcCache[npcID] = name
 		end
 	end
-
-    for i = 1, GetAchievementNumCriteria(PRINT_ACH) do
-        local name, _, completed, _, _, _, _, npcID = GetAchievementCriteriaInfo(PRINT_ACH, i)
-        LUI:Print(name, npcID)
-    end
 end
 
 function addon:GetRareName(id)
@@ -214,7 +208,7 @@ addon.pinList["Glorious!"] = {
     { x = 46.6, y = 16.8, id = 806, rare = 50350, },
     { x = 42.6, y = 16.2, id = 806, rare = 50350, },
     { x = 42.2, y = 17.6, id = 806, rare = 50350, },
-    { x = 40.8, y = 15.2, id = 806, rare = 50350, },-
+    { x = 40.8, y = 15.2, id = 806, rare = 50350, },
     { x = 64.6, y = 74.2, id = 806, rare = 50782, },
     { x = 57.4, y = 71.4, id = 806, rare = 50808, },
     { x = 39.6, y = 57.6, id = 807, rare = 51059, toy = 86565, }, -- Battle Horn
@@ -251,18 +245,18 @@ addon.pinList["Glorious!"] = {
     { x = 41.6, y = 55.2, id = 857, rare = 50816, },
     { x = 52.2, y = 88.8, id = 857, rare = 50830, },
     { x = 15.2, y = 35.6, id = 857, rare = 50388, },
-    { x = 40.8, y = 42.4, id = 809, rare = 50817, }, -- Pandaren Firework Launcher
+    { x = 40.8, y = 42.4, id = 809, rare = 50817, toy = 86588, }, -- Pandaren Firework Launcher
     { x = 56.0, y = 43.4, id = 809, rare = 50341, },
-    { x = 57.6, y = 75.0, id = 809, rare = 50354, }, -- Shard of Archstone
+    { x = 57.6, y = 75.0, id = 809, rare = 50354, toy = 86573, }, -- Shard of Archstone
     { x = 51.6, y = 81.0, id = 809, rare = 50332, },
     { x = 47.4, y = 81.2, id = 809, rare = 50332, },
-    { x = 63.8, y = 13.8, id = 809, rare = 50789, }, -- Hardened Shell
+    { x = 63.8, y = 13.8, id = 809, rare = 50789, toy = 86584, }, -- Hardened Shell
     { x = 47.2, y = 63.0, id = 809, rare = 50831, },
     { x = 46.2, y = 61.8, id = 809, rare = 50831, },
     { x = 44.8, y = 63.6, id = 809, rare = 50831, },
     { x = 44.8, y = 65.2, id = 809, rare = 50831, },
     { x = 36.6, y = 79.6, id = 809, rare = 50733, },
-    { x = 73.8, y = 77.4, id = 809, rare = 50769, }, -- Farwater Conch
+    { x = 73.8, y = 77.4, id = 809, rare = 50769, toy = 86581, }, -- Farwater Conch
     { x = 68.8, y = 89.2, id = 810, rare = 50772, },
     { x = 67.8, y = 87.6, id = 810, rare = 50772, },
     { x = 66.4, y = 86.8, id = 810, rare = 50772, },
@@ -279,27 +273,65 @@ addon.pinList["Glorious!"] = {
     { x = 59.2, y = 85.6, id = 810, rare = 50791, }, 
     { x = 67.6, y = 74.4, id = 810, rare = 50832, },
     { x = 32.0, y = 61.8, id = 810, rare = 50820, },
-    { x = 34.8, y = 23.2, id = 858, rare = 50821, }, -- Ai-Li's Skymirror
+    { x = 34.8, y = 23.2, id = 858, rare = 50821, toy = 86589, }, -- Ai-Li's Skymirror
     { x = 25.2, y = 28.6, id = 858, rare = 50334, }, 
     { x = 39.2, y = 41.8, id = 858, rare = 50739, toy = 86578, }, -- Eternal Warrior's Sigil
     { x = 37.8, y = 29.6, id = 858, rare = 50739, toy = 86578, }, -- Eternal Warrior's Sigil
     { x = 35.6, y = 30.8, id = 858, rare = 50739, toy = 86578, }, -- Eternal Warrior's Sigil
     { x = 55.4, y = 63.4, id = 858, rare = 50836, toy = 86593, }, -- Hozen Beach Ball
-    { x = 71.8, y = 37.6, id = 858, rare = 50347, }, -- Imbued Jade Fragment
+    { x = 71.8, y = 37.6, id = 858, rare = 50347, pet = 86564, }, -- Imbued Jade Fragment
     { x = 73.0, y = 22.2, id = 858, rare = 50356, },
-    { x = 64.2, y = 58.6, id = 858, rare = 50776, }, -- Hollow Reed
+    { x = 64.2, y = 58.6, id = 858, rare = 50776, toy = 86563, }, -- Hollow Reed
     { x = 36.6, y = 64.6, id = 858, rare = 50805, },
     { x = 39.6, y = 61.8, id = 858, rare = 50805, },
     { x = 39.6, y = 58.4, id = 858, rare = 50805, },
     { x = 36.8, y = 60.6, id = 858, rare = 50805, },
-    { x = 42.6, y = 69.0, id = 811, rare = 50822, }, -- Essence of the Breeze
+    { x = 42.6, y = 69.0, id = 811, rare = 50822, toy = 86590, }, -- Essence of the Breeze
     { x = 14.2, y = 58.6, id = 811, rare = 50749, },
-    { x = 15.0, y = 35.6, id = 811, rare = 50347, }, -- Kang's Bindstone
-    { x = 31.0, y = 91.6, id = 811, rare = 50840, }, -- Helpful Wikky's Whistle
+    { x = 15.0, y = 35.6, id = 811, rare = 50347, toy = 86571, }, -- Kang's Bindstone
+    { x = 31.0, y = 91.6, id = 811, rare = 50840, toy = 86594}, -- Helpful Wikky's Whistle
     { x = 45.8, y = 56.0, id = 811, rare = 50806, toy = 86586, }, -- Panflute of Pandaria
     { x = 38.4, y = 54.0, id = 811, rare = 50806, toy = 86586, }, -- Panflute of Pandaria
     { x = 35.6, y = 62.6, id = 811, rare = 50806, toy = 86586, }, -- Panflute of Pandaria
-    { x = 69.6, y = 30.8, id = 811, rare = 50780, }, -- Aqua Jewel
-    { x = 39.8, y = 25.0, id = 811, rare = 50359, }, -- Chalice of Secrets
-    { x = 87.8, y = 44.6, id = 811, rare = 50336, }, -- Mr. Smite's Brass Compass
+    { x = 69.6, y = 30.8, id = 811, rare = 50780, toy = 86582, }, -- Aqua Jewel
+    { x = 39.8, y = 25.0, id = 811, rare = 50359, toy = 86575, }, -- Chalice of Secrets
+    { x = 87.8, y = 44.6, id = 811, rare = 50336, toy = 86568,}, -- Mr. Smite's Brass Compass
+}
+
+addon.pinList["Timeless Champions"] = {
+    { x = 50.2, y = 22.9, id = 951, rare = 73174,                name = "Archiereus of Flame", },
+    { x = 57.8, y = 25.8, id = 951, rare = 73174,                name = "Archiereus of Flame", },
+    { x = 56.6, y = 35.4, id = 951, rare = 73174,                name = "Archiereus of Flame", },
+    { x = 48.8, y = 33.2, id = 951, rare = 73174,                name = "Archiereus of Flame", },
+    { x = 34.8, y = 31.2, id = 951, rare = 73666,                name = "Archiereus of Flame",   note = "Summoned with Scroll of Challenge", },
+    { x = 63.8, y = 73.0, id = 951, rare = 72775, pet = 104169,  note = "Can spawn in the place of any Crooking Hollow.", },
+    { x = 60.6, y = 48.6, id = 951, rare = 73171, toy = 104302,  toyName = "Blackflame Daggers", note = "Patrols Around", },
+    { x = 25.2, y = 36.0, id = 951, rare = 72045, },
+    { x = 54.4, y = 53.2, id = 951, rare = 73175, },
+    { x = 43.8, y = 69.6, id = 951, rare = 73854, },
+    { x = 25.8, y = 23.2, id = 951, rare = 73281, toy = 104294,  note = "Summoned using the Mist-Filled Spirit Lantern from Evermaw.", },
+    { x = 31.0, y = 49.2, id = 951, rare = 73158,                note = "Can spawn in the place of any Brilliant Windfeather.", },
+    { x = 72.8, y = 84.8, id = 951, rare = 73279,                note = "Patrols Around", },
+    { x = 46.6, y = 39.6, id = 951, rare = 73172, toy = 104329, },
+    { x = 64.6, y = 28.6, id = 951, rare = 73282, pet = 104159, },
+    { x = 61.6, y = 64.0, id = 951, rare = 72970, toy = 104262, },
+    { x = 24.6, y = 57.6, id = 951, rare = 73161, },
+    { x = 40.6, y = 79.6, id = 951, rare = 72909, pet = 104291,   note = "Patrols Around", },
+    { x = 68.2, y = 59.0, id = 951, rare = 73167, mount = 104269, note = "Patrols Around", },
+    { x = 34.2, y = 73.4, id = 951, rare = 73163, pet = 104161,   note = "Can spawn in the place of any Death Adder", },
+    { x = 29.8, y = 45.6, id = 951, rare = 73160, },
+    { x = 53.6, y = 83.0, id = 951, rare = 73169, toy = 104331, },
+    { x = 33.8, y = 85.8, id = 951, rare = 72193, },
+    { x = 67.6, y = 44.0, id = 951, rare = 73277, pet = 104156, },
+    { x = 22.8, y = 32.4, id = 951, rare = 73166, pet = 104168,   note = "Can spawn in the place of any crab around the island."},
+    { x = 60.6, y = 87.8, id = 951, rare = 72048, },
+    { x = 44.2, y = 31.0, id = 951, rare = 73157,                 note = "Inside Cave", },
+    { x = 59.0, y = 48.8, id = 951, rare = 71864, },
+    { x = 44.8, y = 38.8, id = 951, rare = 72769, pet = 104307,   note = "Inside Cave", },
+    { x = 71.4, y = 81.4, id = 951, rare = 73704, },
+    { x = 54.2, y = 42.8, id = 951, rare = 72808, },
+    { x = 44.2, y = 26.6, id = 951, rare = 73173,                 note = "Patrols Around", },
+    { x = 57.6, y = 77.2, id = 951, rare = 73170, },
+    { x = 47.6, y = 87.8, id = 951, rare = 72245, },
+    { x = 37.8, y = 77.2, id = 951, rare = 71919, pet = 104167,   note = "Killing 10 Alementals will cause Zhu-Gon to spawn.", },
 }
