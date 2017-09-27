@@ -68,7 +68,7 @@ end
 
 function addon:CreatePin(name)
 	local pin = CreateFrame("Button", name, WorldMapButton)
-	pin:SetSize(20,20)
+	pin:SetSize(20, 20)
 	pin:SetPoint("CENTER", WorldMapButton, "CENTER")
 
 	local tex = pin:CreateTexture(nil, "OVERLAY")
@@ -156,10 +156,6 @@ function addon:GeneratePinList()
 			elseif data.toy then
 				pin.Type = "Toy"
 				pin:SetPinColor("Toy")
-			elseif data.rare then
-				pin.Type = "Rare"
-				pin:SetPinColor("Rare")
-				pin.name = addon:GetRareName(data.rare)
 			end
 
 			HBDPins:AddWorldMapIconMF(addonName, pin, data.id, nil, data.x/100, data.y/100)

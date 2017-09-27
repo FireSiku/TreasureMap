@@ -304,29 +304,54 @@ addon.pinList["Timeless Champions"] = {
     { x = 56.6, y = 35.4, id = 951, rare = 73174,                name = "Archiereus of Flame", },
     { x = 48.8, y = 33.2, id = 951, rare = 73174,                name = "Archiereus of Flame", },
     { x = 34.8, y = 31.2, id = 951, rare = 73666,                name = "Archiereus of Flame",   note = "Summoned with Scroll of Challenge", },
-    { x = 63.8, y = 73.0, id = 951, rare = 72775, pet = 104169,  note = "Can spawn in the place of any Crooking Hollow.", },
-    { x = 60.6, y = 48.6, id = 951, rare = 73171, toy = 104302,  toyName = "Blackflame Daggers", note = "Patrols Around", },
+    { x = 62.2, y = 76.6, id = 951, rare = 72775, pet = 104169,  note = "Can spawn in the place of any Crooking Hollow.", },
+    { x = 63.4, y = 73.0, id = 951, rare = 72775, pet = 104169,  note = "Can spawn in the place of any Crooking Hollow.", },
+    { x = 64.4, y = 74.6, id = 951, rare = 72775, pet = 104169,  note = "Can spawn in the place of any Crooking Hollow.", },
+    { x = 62.4, y = 44.2, id = 951, rare = 73171, toy = 104302,  toyName = "Blackflame Daggers", note = "Patrols Around", },
+    { x = 70.8, y = 51.0, id = 951, rare = 73171, toy = 104302,  toyName = "Blackflame Daggers", note = "Patrols Around", },
+    { x = 60.6, y = 48.4, id = 951, rare = 73171, toy = 104302,  toyName = "Blackflame Daggers", note = "Patrols Around", },
     { x = 25.2, y = 36.0, id = 951, rare = 72045, },
     { x = 54.4, y = 53.2, id = 951, rare = 73175, },
     { x = 43.8, y = 69.6, id = 951, rare = 73854, },
     { x = 25.8, y = 23.2, id = 951, rare = 73281, toy = 104294,  note = "Summoned using the Mist-Filled Spirit Lantern from Evermaw.", },
-    { x = 31.0, y = 49.2, id = 951, rare = 73158,                note = "Can spawn in the place of any Brilliant Windfeather.", },
+    { x = 44.4, y = 54.8, id = 951, rare = 73158,                note = "Can spawn in the place of any Brilliant Windfeather.", },
+    { x = 29.4, y = 50.0, id = 951, rare = 73158,                note = "Can spawn in the place of any Brilliant Windfeather.", },
+    { x = 30.2, y = 43.4, id = 951, rare = 73158,                note = "Can spawn in the place of any Brilliant Windfeather.", },
     { x = 72.8, y = 84.8, id = 951, rare = 73279,                note = "Patrols Around", },
-    { x = 46.6, y = 39.6, id = 951, rare = 73172, toy = 104329, },
+    { x = 14.2, y = 29.6, id = 951, rare = 73279,                note = "Patrols Around", },
+    { x = 14.6, y = 55.6, id = 951, rare = 73279,                note = "Patrols Around", },
+    { x = 16.0, y = 63.0, id = 951, rare = 73279,                note = "Patrols Around", },
+    { x = 44.2, y = 33.8, id = 951, rare = 73172, toy = 104329, },
+    { x = 40.4, y = 26.4, id = 951, rare = 73172, toy = 104329, },
+    { x = 46.4, y = 39.6, id = 951, rare = 73172, toy = 104329, },
     { x = 64.6, y = 28.6, id = 951, rare = 73282, pet = 104159, },
-    { x = 61.6, y = 64.0, id = 951, rare = 72970, toy = 104262, },
-    { x = 24.6, y = 57.6, id = 951, rare = 73161, },
-    { x = 40.6, y = 79.6, id = 951, rare = 72909, pet = 104291,   note = "Patrols Around", },
+    { x = 62.2, y = 62.6, id = 951, rare = 72970, toy = 104262, },
+    { x = 60.4, y = 62.2, id = 951, rare = 72970, toy = 104262, },
+    { x = 60.6, y = 63.8, id = 951, rare = 72970, toy = 104262, },
+    { x = 23.6, y = 47.6, id = 951, rare = 73161, },
+    { x = 23.8, y = 54.0, id = 951, rare = 73161, },
+    { x = 22.0, y = 42.4, id = 951, rare = 73161, },
+    { x = 30.6, y = 72.8, id = 951, rare = 72909, pet = 104291,   note = "Patrols Around", },
+    { x = 30.4, y = 71.0, id = 951, rare = 72909, pet = 104291,   note = "Patrols Around", },
+    { x = 31.6, y = 75.0, id = 951, rare = 72909, pet = 104291,   note = "Patrols Around", },
     { x = 68.2, y = 59.0, id = 951, rare = 73167, mount = 104269, note = "Patrols Around", },
-    { x = 34.2, y = 73.4, id = 951, rare = 73163, pet = 104161,   note = "Can spawn in the place of any Death Adder", },
-    { x = 29.8, y = 45.6, id = 951, rare = 73160, },
+    { x = 30.2, y = 36.6, id = 951, rare = 73163, pet = 104161,   note = "Can spawn in the place of any Death Adder", },
+    { x = 25.8, y = 46.6, id = 951, rare = 73163, pet = 104161,   note = "Can spawn in the place of any Death Adder", },
+    { x = 27.4, y = 61.4, id = 951, rare = 73163, pet = 104161,   note = "Can spawn in the place of any Death Adder", },
+    { x = 29.6, y = 45.8, id = 951, rare = 73160, },
+    { x = 30.2, y = 71.4, id = 951, rare = 73160, },
+    { x = 32.0, y = 59.0, id = 951, rare = 73160, },
     { x = 53.6, y = 83.0, id = 951, rare = 73169, toy = 104331, },
     { x = 33.8, y = 85.8, id = 951, rare = 72193, },
     { x = 67.6, y = 44.0, id = 951, rare = 73277, pet = 104156, },
-    { x = 22.8, y = 32.4, id = 951, rare = 73166, pet = 104168,   note = "Can spawn in the place of any crab around the island."},
+    { x = 21.4, y = 32.6, id = 951, rare = 73166, pet = 104168,   note = "Can spawn in the place of any crab around the island."},
+    { x = 21.4, y = 64.0, id = 951, rare = 73166, pet = 104168,   note = "Can spawn in the place of any crab around the island."},
+    { x = 27.8, y = 74.4, id = 951, rare = 73166, pet = 104168,   note = "Can spawn in the place of any crab around the island."},
     { x = 60.6, y = 87.8, id = 951, rare = 72048, },
     { x = 44.2, y = 31.0, id = 951, rare = 73157,                 note = "Inside Cave", },
     { x = 59.0, y = 48.8, id = 951, rare = 71864, },
+    { x = 45.4, y = 31.2, id = 951, rare = 72769, pet = 104307,   note = "Inside Cave", },
+    { x = 44.0, y = 37.2, id = 951, rare = 72769, pet = 104307,   note = "Inside Cave", },
     { x = 44.8, y = 38.8, id = 951, rare = 72769, pet = 104307,   note = "Inside Cave", },
     { x = 71.4, y = 81.4, id = 951, rare = 73704, },
     { x = 54.2, y = 42.8, id = 951, rare = 72808, },
@@ -334,4 +359,83 @@ addon.pinList["Timeless Champions"] = {
     { x = 57.6, y = 77.2, id = 951, rare = 73170, },
     { x = 47.6, y = 87.8, id = 951, rare = 72245, },
     { x = 37.8, y = 77.2, id = 951, rare = 71919, pet = 104167,   note = "Killing 10 Alementals will cause Zhu-Gon to spawn.", },
+}
+
+addon.pinList["Jungle Stalker"] = {
+    { x = 16.8, y = 49.4, id = 945, rare = 91374, }, -- Podlord Wakkawam
+    { x = 39.2, y = 68.8, id = 945, rare = 91093, toy = 127652, }, -- Bramblefell
+    { x = 41  , y = 67.6, id = 945, rare = 91093, toy = 127652, }, -- Bramblefell
+    { x = 48.2, y = 28.4, id = 945, rare = 91087, }, -- Zeter'el
+    { x = 52.8, y = 25.6, id = 945, rare = 91098, }, -- Felspark
+    { x = 52.2, y = 27.4, id = 945, rare = 91098, }, -- Felspark
+    { x = 31.4, y = 71.8, id = 945, rare = 90429, toy = 127655, }, -- Imp-Master Valessa
+    { x = 25.6, y = 76.6, id = 945, rare = 90438, }, -- Lady Oran
+    { x = 26.6, y = 75  , id = 945, rare = 90437, }, -- Jax'zor
+    { x = 31.4, y = 68  , id = 945, rare = 90434, pet = 91823, }, -- Ceraxas
+    { x = 26  , y = 79.4, id = 945, rare = 90442, }, -- Mistress Thavra
+    { x = 44.6, y = 37.8, id = 945, rare = 90519, }, -- Cindral the Wildfire
+    { x = 41.6, y = 37.8, id = 945, rare = 90024, }, -- Sergeant Mor'grak
+    { x = 42.8, y = 36.4, id = 945, rare = 90024, }, -- Sergeant Mor'grak
+    { x = 27.6, y = 32.6, id = 945, rare = 92451, }, -- Varyx the Damned
+    { x = 17.2, y = 43.4, id = 945, rare = 90782, }, -- Rasthe
+    { x = 53.6, y = 21.4, id = 945, rare = 92274, }, -- Painmistress Selora
+    { x = 47  , y = 42.8, id = 945, rare = 91695, }, -- Grand Warlock Nethekurse
+    { x = 46.2, y = 40.8, id = 945, rare = 91695, }, -- Grand Warlock Nethekurse
+    { x = 46.8, y = 39.4, id = 945, rare = 91695, }, -- Grand Warlock Nethekurse
+    { x = 65.4, y = 36.6, id = 945, rare = 92887, }, -- Steelsnout
+    { x = 52.2, y = 65.2, id = 945, rare = 93002, }, -- Magwia
+    { x = 15  , y = 54.2, id = 945, rare = 91232, }, -- Commander Krag'goth
+    { x = 13.4, y = 56.8, id = 945, rare = 91243, }, -- Tho'gar Gorefist
+    { x = 16  , y = 59.2, id = 945, rare = 93057, }, -- Grannok
+    { x = 16  , y = 57  , id = 945, rare = 93001, }, -- Szirek the Twisted
+    { x = 13  , y = 57  , id = 945, rare = 92977, }, -- The Iron Houndmaster
+    { x = 23.6, y = 52  , id = 945, rare = 90884, }, -- Bilkor the Thrower
+    { x = 20.4, y = 49.8, id = 945, rare = 90885, }, -- Rogond the Tracker
+    { x = 22.8, y = 48.8, id = 945, rare = 90887, }, -- Dorg the Bloody
+    { x = 24.8, y = 46.4, id = 945, rare = 90887, }, -- Dorg the Bloody
+    { x = 25.4, y = 46.2, id = 945, rare = 90888, }, -- Drivnul
+    { x = 23.4, y = 49.6, id = 945, rare = 90936, }, -- Bloodhunter Zulk
+    { x = 21  , y = 52.4, id = 945, rare = 90936, }, -- Bloodhunter Zulk
+    { x = 22.2, y = 54  , id = 945, rare = 90936, }, -- Bloodhunter Zulk
+    { x = 26.2, y = 54.4, id = 945, rare = 92197, }, -- Relgor
+    { x = 57.6, y = 67.2, id = 945, rare = 92429, }, -- Broodlord Ixkor
+    { x = 62.6, y = 72.2, id = 945, rare = 92495, }, -- Soulslicer
+    { x = 63.4, y = 81  , id = 945, rare = 92508, }, -- Gloomtalon
+    { x = 52  , y = 83.6, id = 945, rare = 92517, }, -- Krell the Serene
+    { x = 49.2, y = 73.6, id = 945, rare = 92465, }, -- The Blackfang
+    { x = 34  , y = 44.4, id = 945, rare = 92574, }, -- Thromma the Gutslicer
+    { x = 35.4, y = 46.8, id = 945, rare = 92552, }, -- Belgork
+    { x = 41  , y = 78.6, id = 945, rare = 92606, }, -- Sylissa
+    { x = 42.6, y = 76.4, id = 945, rare = 92627, }, -- Rendrak
+    { x = 39.2, y = 70.8, id = 945, rare = 92627, }, -- Rendrak
+    { x = 40.2, y = 74  , id = 945, rare = 92627, }, -- Rendrak
+    { x = 43  , y = 74.4, id = 945, rare = 92636, }, -- The Night Haunter
+    { x = 37.8, y = 72.6, id = 945, rare = 92636, }, -- The Night Haunter
+    { x = 38.2, y = 76  , id = 945, rare = 92636, }, -- The Night Haunter
+    { x = 34.4, y = 72.6, id = 945, rare = 92694, }, -- The Goreclaw
+    { x = 33  , y = 35.8, id = 945, rare = 92941, }, -- Gorabosh
+    { x = 20  , y = 53.6, id = 945, rare = 93028, }, -- Driss Vile
+    { x = 36.2, y = 79  , id = 945, rare = 93076, }, -- (The Real) Captain Ironbeard
+    { x = 36  , y = 80.6, id = 945, rare = 93076, }, -- (The Real) Captain Ironbeard
+    { x = 34.6, y = 78  , id = 945, rare = 93125, }, -- Glub'glok
+    { x = 28.8, y = 51  , id = 945, rare = 93168, }, -- Felbore
+    { x = 54.2, y = 80.8, id = 945, rare = 92766, }, -- Akrrilo
+    { x = 54.2, y = 80.8, id = 945, rare = 92817, }, -- Rendarr
+    { x = 54.2, y = 80.8, id = 945, rare = 92819, }, -- Eyepiercer
+    { x = 50.8, y = 74.4, id = 945, rare = 92657, }, -- Bleeding Hollow Horror
+    { x = 39.6, y = 68.2, id = 945, rare = 93279, }, -- Kris'kar the Unredeemed
+    { x = 49.8, y = 36.2, id = 945, rare = 91727, }, -- Executor Riloth
+    { x = 52.6, y = 40.2, id = 945, rare = 91871, }, -- Argosh the Destroyer
+    { x = 37  , y = 33  , id = 945, rare = 90122, }, -- Zoug the Heavy
+    { x = 39.6, y = 32.6, id = 945, rare = 90094, }, -- Harbormaster Korak
+    { x = 49.6, y = 61  , id = 945, rare = 93236, }, -- Shadowthrash
+    { x = 45.8, y = 47  , id = 945, rare = 92647, }, -- Felsmith Damorka
+    { x = 57  , y = 23  , id = 945, rare = 91009, }, -- Putre'thar
+    { x = 60.2, y = 21  , id = 945, rare = 92408, }, -- Xanzith the Everlasting
+    { x = 52.4, y = 19.2, id = 945, rare = 92411, }, -- Overlord Ma'gruth
+    { x = 48.6, y = 57.2, id = 945, rare = 93264, }, -- Captain Grok'mar
+    { x = 50.2, y = 43.4, id = 945, rare = 89675, }, -- Commander Org'mok
+    { x = 47.4, y = 44.8, id = 945, rare = 89675, }, -- Commander Org'mok
+    { x = 47.6, y = 46.6, id = 945, rare = 89675, }, -- Commander Org'mok
+
 }
