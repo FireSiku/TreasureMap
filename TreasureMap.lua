@@ -141,7 +141,12 @@ function addon:GeneratePinList()
 			end
 
 			-- Add type-specific information. 
-			if data.pet then
+			-- Check for rare first, if the rare is already killed and he has something of interest, color it appropriatelyt afterward.
+			if data.rare then
+				pin.Type = "Rare"
+				pin:SetPinColor("Rare")
+				pin.name = addon:GetRareName(data.rare)
+			elseif data.pet then
 				pin:SetPinColor("Pet")
 				pin.type = "Pet"
 				pin.name = addon:GetPetName(data.pet)
