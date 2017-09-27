@@ -6,7 +6,7 @@ local addon = LibStub("AceAddon-3.0"):GetAddon(addonName)
 local HBD = LibStub("HereBeDragons-1.0")
 
 -- Scanning those acheivements can give us various npc names, mostly used for rares.
-local RARE_ACHIEVEMENTS = { 1312, 2257, 7439, 8714, }
+local RARE_ACHIEVEMENTS = { 1312, 2257, 7439, 8714, 10070}
 
 ---------------------
 -- Addon Functions --
