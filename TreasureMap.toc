@@ -15,3 +15,4 @@ TreasureMap.lua
 Pets.lua
 Mounts.lua
 Rares.lua
+Treasures.lua

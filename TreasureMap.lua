@@ -156,6 +156,12 @@ function addon:GeneratePinList()
 			elseif data.toy then
 				pin.Type = "Toy"
 				pin:SetPinColor("Toy")
+			elseif data.flag then
+				pin.Type = "Treasure"
+				pin:SetPinColor("Treasure")
+			else
+				pin.Type = "Other"
+				pin:SetPinColor("Other")
 			end
 
 			HBDPins:AddWorldMapIconMF(addonName, pin, data.id, nil, data.x/100, data.y/100)
